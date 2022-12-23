@@ -1,6 +1,6 @@
 import pygame
 import math
-from glob_param import *
+from constants import *
 
 
 class Planet:
@@ -40,9 +40,9 @@ class Planet:
 
         pygame.draw.circle(win, self.color, (x, y), self.radius)
 
-        name = font.render(self.name, False, WHITE)
-        # win.blit(name, (x - name.get_width()/2 ,y - name.get_height()/2))
-        win.blit(name, (x,y))
+        name = font.render(self.name, False, CYAN)
+        win.blit(name, (x - name.get_width()/2 ,y - name.get_height()/2))
+        # win.blit(name, (x,y))
 
     def attraction(self, other):
         other_x, other_y = other.x, other.y

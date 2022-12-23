@@ -1,10 +1,8 @@
 import pygame
+from constants import *
+import solar_system
+
 pygame.init()
-
-from glob_param import *
-import solar
-# import rand_planet
-
 
 ## Game Screen 
 WIN = pygame.display.set_mode((WIDTH,HEIGHT))
@@ -28,7 +26,7 @@ def update_year(count):
 def main():
 
     run = True
-    planets = solar.create_solar()
+    planets = solar_system.create()
     # planets = rand_planet.generate(100)
 
     while run:
